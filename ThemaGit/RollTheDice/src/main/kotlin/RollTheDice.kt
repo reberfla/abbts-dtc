@@ -17,11 +17,18 @@ fun main() {
     val computerScore = aDie.nextInt(1..6)
     print("Please enter your player name:")
     val username: String = readln()
+    var userinput = "j"
 
-    println("$username würfelt: $playerScore  --  Computer würfelt: $computerScore")
-    when {
-        playerScore > computerScore -> println("$username gewinnt")
-        playerScore < computerScore -> println("Der Computer gewinnt")
-        else -> println("Unentschieden")
+    while (userinput == "j") {
+        println("$username würfelt: $playerScore  --  Computer würfelt: $computerScore")
+        when {
+            playerScore > computerScore -> println("$username gewinnt")
+            playerScore < computerScore -> println("Der Computer gewinnt")
+            else -> println("Unentschieden")
+        }
+        print("Möchten Sie noch einmal spielen? (j/n)")
+        userinput = readln()
     }
+    println("Spiel beendet")
+
 }
