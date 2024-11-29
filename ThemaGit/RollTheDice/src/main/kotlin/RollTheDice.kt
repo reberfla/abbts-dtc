@@ -15,14 +15,12 @@ fun main() {
 
     val playerScore = aDie.nextInt(1..6)
     val computerScore = aDie.nextInt(1..6)
+    print("Please enter your player name:")
+    val username: String = readln()
 
-    // Todo: Den Spieler nach dem Namen fragen
-    // Todo: Solange spielen bis Spieler abbricht
-    // Todo: Ausgeben, wer mehr Runden gewonnen hat
-
-    println("Du würfelst: $playerScore  --  Computer würfelt: $computerScore")
+    println("$username würfelt: $playerScore  --  Computer würfelt: $computerScore")
     when {
-        playerScore > computerScore -> println("Du gewinnst")
+        playerScore > computerScore -> println("$username gewinnt")
         playerScore < computerScore -> println("Der Computer gewinnt")
         else -> println("Unentschieden")
     }
